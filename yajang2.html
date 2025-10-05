@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>야장2 호출</title>
+  <script>
+    function sendTelegramMessage() {
+      const botToken = "7879626081:AAGy9mzVLSxxYgYjmXUWgimcNRFD0ihdO_8"; 
+      const chatId = "8284773661";  
+      const message = "야장2 호출! 🚨";
+
+      fetch(`https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${message}`)
+        .then(response => {
+          if (response.ok) {
+            alert("야장2 호출이 전송되었습니다!");
+          } else {
+            alert("호출 실패. 다시 시도해주세요.");
+          }
+        });
+    }
+  </script>
+</head>
+<body style="text-align:center; margin-top:50px;">
+  <h2>야장2 호출</h2>
+  <img src="call.png" 
+       alt="호출 버튼" 
+       style="cursor:pointer; width:200px;" 
+       onclick="sendTelegramMessage()">
+</body>
+</html>

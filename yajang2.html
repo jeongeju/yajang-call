@@ -19,12 +19,24 @@
         });
     }
   </script>
+  <style>
+    body {
+      text-align: center;
+      margin-top: 50px;
+      font-family: Arial, sans-serif;
+    }
+
+    img {
+      max-width: 80%;
+      height: auto;
+      cursor: pointer;
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
 </head>
-<body style="text-align:center; margin-top:50px;">
+<body>
   <h2>야장2 호출</h2>
-  <img src="call.png" 
-       alt="호출 버튼" 
-       style="cursor:pointer; width:200px;" 
-       onclick="sendTelegramMessage()">
+  <img src="call.png" alt="호출 버튼" onclick="sendTelegramMessage()">
 </body>
 </html>
